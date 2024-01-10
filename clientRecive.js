@@ -5,7 +5,7 @@ const token= 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwib
 class DeliveryGuy {
   constructor(userId,online,clientSocket) {
     this.userId = userId;
-    this.serverAddress = `ws://10.100.50.165:8765?token=${token}`; 
+    this.serverAddress = `wss://10.100.50.165:8765?token=${token}`; 
     this.getMessages =  true;
     this.sendMessage  = false;
     this.online = online
