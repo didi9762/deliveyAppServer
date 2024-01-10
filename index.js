@@ -14,11 +14,13 @@ app.use(cors());
 app.use(express.json());
 app.use('/client',ClientRouter)
 
-startServer()
+
 
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });
+
+startServer()
 
 
 
