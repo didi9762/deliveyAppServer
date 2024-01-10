@@ -15,12 +15,13 @@ app.use(express.json());
 app.use('/client',ClientRouter)
 
 
-
-app.listen(PORT, () => {
+async function start(){
+await app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });
 
-startServer()
+await startServer()
 
-
+} 
+start()
 
