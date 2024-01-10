@@ -7,7 +7,7 @@ const token= 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwib
 
 class StoreManager {
   constructor() {
-    this.serverAddress = `ws://127.0.0.1:8765?token=${token}`; 
+    this.serverAddress = `wss://127.0.0.1:8765?token=${token}`; 
     this.userId = 'store_manager_1'; 
     this.sendMessages = true;
     this.getMessages = false;
