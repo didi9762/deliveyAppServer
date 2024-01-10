@@ -1,0 +1,14 @@
+services:
+  - type: web
+    name: your-app
+    env: python
+    buildCommand: python3 your_startup_script.py
+    startCommand: gunicorn -b 0.0.0.0:8888 your_app:app  # HTTP port
+    healthCheckPath: /healthcheck
+  - type: web
+    name: socket-server
+    env: python
+    buildCommand: python3 your_socket_startup_script.py
+    startCommand: python3 your_socket_server.py  # WebSocket port
+    internalPort: 12345  # Specify the WebSocket port
+    healthCheckPath: /socket-healthcheck
